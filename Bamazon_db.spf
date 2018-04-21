@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>database</key>
+			<string>Bamazon_DB</string>
+			<key>host</key>
+			<string>localhost</string>
+			<key>name</key>
+			<string>localhost</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>socket</key>
+			<string>/Applications/MAMP/tmp/mysql/mysql.sock</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPSocketConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 456}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>CREATE TABLE Products( 
+	ItemID int AUTO_INCREMENT, 
+	ProductName varchar(30) NOT NULL, 
+	DepartmentName varchar(30) NOT NULL, 
+	Price int NOT NULL,
+	StockQuantity int NOT NULL,
+	PRIMARY KEY (ItemID)
+);
+
+INSERT INTO Products(ProductName, DepartmentName, Price, StockQuantity) VALUES ('Playstation 4', 'Videogames',349.00,200), ('Xbox One','Videogames', 299.00, 200), ('Wii U', 'Videogames', 299.00, 141), ('Betty Crocker Pizza Maker','Kitchen',35.67, 25), ('Kindle Paperwhite','Digital Books',99.99,1000), ('Kindle Oasis','Digital Books',289.99,3000),('Amazon Echo','Home Automation Controller', 179.99,500),('Pioneer AVH270BT', 'Car Radios',199.99,20),('Playstation Vita', 'Videogames', 159.99,11),('New Nintendo 3DS', 'Videogames',165.00,32);</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>276</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>CREATE TABLE Products( 
+	ItemID int AUTO_INCREMENT, 
+	ProductName varchar(30) NOT NULL, 
+	DepartmentName varchar(30) NOT NULL, 
+	Price int NOT NULL,
+	StockQuantity int NOT NULL,
+	PRIMARY KEY (ItemID)
+);
+INSERT INTO Products(ProductName, DepartmentName, Price, StockQuantity) VALUES ('Playstation 4', 'Videogames',349.00,200), ('Xbox One','Videogames', 299.00, 200), ('Wii U', 'Videogames', 299.00, 141), ('Betty Crocker Pizza Maker','Kitchen',35.67, 25), ('Kindle Paperwhite','Digital Books',99.99,1000), ('Kindle Oasis','Digital Books',289.99,3000),('Amazon Echo','Home Automation Controller', 179.99,500),('Pioneer AVH270BT', 'Car Radios',199.99,20),('Playstation Vita', 'Videogames', 159.99,11),('New Nintendo 3DS', 'Videogames',165.00,32)</string>
+		<string>DROP DATABASE IF EXISTS top_songsDB;
+CREATE database top_songsDB;
+USE top_songsDB;
+CREATE TABLE top5000 (
+  position INT NOT NULL,
+  artist VARCHAR(100) NULL,
+  song VARCHAR(100) NULL,
+  year INT NULL,
+  raw_total DECIMAL(10,4) NULL,
+  raw_usa DECIMAL(10,4) NULL,
+  raw_uk DECIMAL(10,4) NULL,
+  raw_eur DECIMAL(10,4) NULL,
+  raw_row DECIMAL(10,4) NULL,
+  PRIMARY KEY (position)
+);
+SELECT * FROM top5000</string>
+		<string>SELECT * FROM top5000</string>
+		<string>INSERT INTO music (Title, Artists, Genre)
+VALUES ("Dream", "Bishop Briggs", "Indie Pop"), 
+("Hey Jude", "The Beatles", "Classic Rock"),
+("Born This Way", "Lady GaGa", "Pop"),
+("The Wire", "Haim", "Indie Rock"),
+("Alaska", "Maggie Rogers", "Alternative/Indie"),
+("Sober", "Childish Gambino", "R&amp;B"),
+("Castle", "Macklemore", "Hip Hop"),
+("Glitter in the Air", "Pink", "Pop"),
+("Georgia", "Vance Joy", "Indie Folk"),
+("Little Maggie", "The Whiskey Collection", "Indie Folk")</string>
+		<string>INSERT INTO music (Title, Artists, Genre)
+VALUES ("Dream", "Bishop Briggs", "Indie Pop"), 
+("Hey Jude", "The Beatles", "Classic Rock"),
+("Born This Way", "Lady GaGa", "Pop"),
+("The Wire", "Haim", "Indie Rock"),
+("Alaska", "Maggie Rogers", "Alternative/Indie"),
+("Sober", "Childish Gambino", "R&amp;B"),
+("Castle", "Macklemore", "Hip Hop"),
+("Glitter in the Air", "Pink", "Pop"),
+("Georgia", "Vance Joy", "Indie Folk"),
+("Little Maggie", "The Whiskey Collection", "Indie Folk"),</string>
+		<string>INSERT INTO music (Title, Artists, Genre)
+VALUES ("Dream", "Bishop Briggs", "Indie Pop"), 
+("Hey Jude", "The Beatles", "Classic Rock"),
+("Born This Way", "Lady GaGa", "Pop"),
+("The Wire", "Haim", "Indie Rock"),
+("Alaska", "Maggie Rogers", "Alternative/Indie"),
+("Sober", "Childish Gambino", "R&amp;B"),
+("Castle", "Macklemore", "Hip Hop")
+("Glitter in the Air", "Pink", "Pop"),
+("Georgia", "Vance Joy", "Indie Folk"),
+("Little Maggie", "The Whiskey Collection", "Indie Folk"),</string>
+		<string>USE music_db;
+CREATE TABLE music (
+	ID int NOT NULL AUTO_INCREMENT,
+	Title VARCHAR(50),
+	Artists VARCHAR(50),
+	Genre VARCHAR(50),
+	PRIMARY KEY (ID)
+);
+INSERT INTO music (Title, Artists, Genre)
+VALUES ("Dream", "Bishop Briggs", "Indie Pop"), 
+("Hey Jude", "The Beatles", "Classic Rock"),
+("Born This Way", "Lady GaGa", "Pop")</string>
+		<string>INSERT INTO music (Title, Artists, Genre)
+VALUES ("Dream", "Bishop Briggs", "Indie Pop"),
+VALUES ("Hey Jude", "The Beatles", "Classic Rock")</string>
+		<string>VALUES ("Hey Jude", "The Beatles", "Classic Rock")</string>
+		<string>CREATE TABLE music (
+	ID int NOT NULL,
+	Title VARCHAR(50),
+	Artists VARCHAR(50),
+	Genre VARCHAR(50),
+	PRIMARY KEY (ID)
+)</string>
+		<string>INSERT INTO music (Title, Artists, Genre)
+VALUES ("Dream", "Bishop Briggs", "Indie Pop")</string>
+		<string>INSERT INTO music (Title, Artists, Genre)
+VALUES (Dream, Bishop Briggs, Indie Pop)</string>
+		<string>USE music_db;
+CREATE TABLE music (
+	ID int NOT NULL,
+	Title VARCHAR(50),
+	Artists VARCHAR(50),
+	Genre VARCHAR(50),
+	PRIMARY KEY (ID)
+)</string>
+		<string>USE music_db</string>
+		<string>USE music_db
+CREATE TABLE music (
+	ID int NOT NULL,
+	Title VARCHAR(50),
+	Artists VARCHAR(50),
+	Genre VARCHAR(50),
+	PRIMARY KEY (ID)
+)</string>
+		<string>USE music_db
+CREATE TABLE music (
+	ID int NOT NULL,
+	Title VARCHAR,
+	Artists VARCHAR,
+	Genre VARCHAR,
+	PRIMARY KEY (ID)
+)</string>
+		<string>USE music_db
+CREATE TABLE music (
+	ID int NOT NULL,
+	Title VARCHAR
+	Artists VARCHAR
+	Genre VARCHAR
+	PRIMARY KEY (ID)
+)</string>
+		<string>USE animals_db;
+CREATE TABLE animals_db (
+    name VARCHAR(30) NOT NULL,
+    has_pet BOOLEAN NOT NULL,
+    pet_name VARCHAR(30),
+    pet_age INTEGER(10),    
+);
+USE animals_db;
+INSERT INTO animals_db (name, has_pet, pet_name, pet_age)
+VALUES ('Danielle', true, 'Stinky', 7);
+SELECT * FROM animals_db</string>
+		<string>USE animals_db;
+CREATE TABLE animals (
+    name VARCHAR(30) NOT NULL,
+    has_pet BOOLEAN NOT NULL,
+    pet_name VARCHAR(30),
+    pet_age INTEGER(10),    
+);
+USE animals_db;
+INSERT INTO animals (name, has_pet, pet_name, pet_age)
+VALUES ('Danielle', true, 'Stinky', 7);
+SELECT * FROM animals_db</string>
+		<string>SELECT * FROM animals_db</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.6.38</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>
